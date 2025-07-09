@@ -1,0 +1,33 @@
+# Swap, backup, and undo files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.undo
+
+# Lua bytecode
+*.luac
+
+# Plugin managers (e.g., lazy.nvim, packer)
+**/plugin/packer_compiled.lua
+**/lazy-lock.json
+**/.netrwhist
+**/site/**
+
+# Node modules (if using JS/TS plugins)
+**/node_modules/
+
+# Optional: compiled LSP/mason files
+**/mason/packages/**
+**/mason/bin/**
+**/mason/share/**
+**/mason/libexec/**
+
+# Logs
+**/log/
+**/*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
