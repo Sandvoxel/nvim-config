@@ -17,6 +17,12 @@ return {
         end,
         { silent = true, buffer = bufnr }
       )
+
+      vim.keymap.set("n", "<leader>ci", function()
+        local buf = vim.api.nvim_get_current_buf()
+        local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = buf })
+        vim.lsp.inlay_hint.enable(not enabled, { bufnr = buf })
+      end, { desc = "Toggle Inlay Hints" })
     end,
   },
   {
