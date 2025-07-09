@@ -22,6 +22,9 @@ return {
         },
       })
       require("telescope").load_extension("ui-select")
+      vim.keymap.set("n", "<leader>fs", function()
+        require("telescope.builtin").lsp_workspace_symbols({ query = "" })
+      end, { desc = "Search Symbols (LSP)" })
     end,
   },
 }
