@@ -5,6 +5,7 @@ return {
     branch = "0.1.x",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
+      local actions = require("telescope.actions")
       local action_state = require("telescope.actions.state")
 
       local function open_file_in_direction()
