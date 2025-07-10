@@ -1,5 +1,3 @@
--- File: lua/plugins/toggleterm.lua
-
 return {
   "akinsho/toggleterm.nvim",
   version = "*",
