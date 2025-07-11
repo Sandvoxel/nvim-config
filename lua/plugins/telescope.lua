@@ -15,7 +15,7 @@ return {
               local entry = action_state.get_selected_entry()
               actions.close(prompt_bufnr)
 
-              vim.ui.select({ "left", "down", "up", "right" }, {
+              vim.ui.select({ "right", "down", "up", "left" }, {
                 prompt = "Open file split direction:",
               }, function(choice)
                 if not choice then

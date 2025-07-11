@@ -9,19 +9,17 @@ return {
     float_opts = {
       border = "curved",
     },
+    -- You can still use these callbacks if you want to modify behavior when the terminal opens/closes
     on_open = function(_)
-      local name = vim.fn.bufname("neo-tree")
-      local winnr = vim.fn.bufwinnr(name)
-
-      if winnr ~= -1 then
-        vim.defer_fn(function()
-          local cmd = string.format("Neotree toggle")
-          vim.cmd(cmd)
-          vim.cmd(cmd)
-          vim.cmd("wincmd p")
-        end, 100)
+      -- Optional: save the current window to return to after the terminal closes
+      vim.b.toggleterm_prev_win = vim.api.nvim_get_current_win()
+    end,
+    on_close = function()
+      -- Return to previous window if stored
+      local prev_win = vim.b.toggleterm_prev_win
+      if prev_win and vim.api.nvim_win_is_valid(prev_win) then
+        vim.api.nvim_set_current_win(prev_win)
       end
     end,
-    on_close = function() end,
   },
 }
