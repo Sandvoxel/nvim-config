@@ -8,9 +8,9 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
-    version = "^5", -- Recommended
+    version = "^6", -- Recommended
     lazy = false, -- This plugin is already lazy
-    config = function() end,
+    init = function() end,
   },
   {
     "williamboman/mason.nvim",
@@ -19,7 +19,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "rust_analyzer", "lua_ls" },
+      ensure_installed = { "lua_ls" },
     },
   },
   {

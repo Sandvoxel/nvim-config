@@ -8,11 +8,12 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 -- Create or get an augroup for our autocommands
 
-
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
-    if vim.v.event.operator ~= "p" then return end
+    if vim.v.event.operator ~= "p" then
+      return
+    end
 
     local start_line = vim.fn.getpos("'<")[2]
     local end_line = vim.fn.getpos("'>")[2]
