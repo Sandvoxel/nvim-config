@@ -1,0 +1,5 @@
+WRN 2025-09-29T14:32:50.117 ?.42951    server_start:193: Failed to start server: operation not permitted: /var/folders/x6/208x44x527z7cjwzdy_ds3zc0000gn/T/nvim.kylekovalchick/hx1LUe/nvim.42951.0
+WRN 2025-09-29T14:52:51.032 ?.44372    server_start:193: Failed to start server: operation not permitted: /var/folders/x6/208x44x527z7cjwzdy_ds3zc0000gn/T/nvim.kylekovalchick/NS7RZv/nvim.44372.0
+WRN 2025-09-29T23:54:13.969 ?.66100    server_start:193: Failed to start server: operation not permitted: /var/folders/x6/208x44x527z7cjwzdy_ds3zc0000gn/T/nvim.kylekovalchick/E4h9dJ/nvim.66100.0
+WRN 2025-09-30T00:01:42.600 ?.67423    server_start:193: Failed to start server: operation not permitted: /var/folders/x6/208x44x527z7cjwzdy_ds3zc0000gn/T/nvim.kylekovalchick/PmK9BP/nvim.67423.0
+WRN 2025-09-30T00:01:55.324 ?.67484    server_start:193: Failed to start server: operation not permitted: /var/folders/x6/208x44x527z7cjwzdy_ds3zc0000gn/T/nvim.kylekovalchick/l0tu5x/nvim.67484.0

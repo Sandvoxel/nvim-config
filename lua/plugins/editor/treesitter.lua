@@ -22,5 +22,11 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
     })
+
+    -- apply rainbow local identifier highlighting once treesitter is ready
+    local ok, rainbow = pcall(require, "utils.rainbow_locals")
+    if ok and rainbow then
+      rainbow.setup()
+    end
   end,
 }

@@ -6,6 +6,7 @@ return {
       { "<leader>c", group = "Code Tools" },
       { "<leader>g", group = "Git" },
       { "<leader>h", group = "Harpoon" },
+      { "<leader>f", group = "Files" },
       { "<leader>s", group = "Search / Replace" },
       { "<leader>t", group = "TODOs" },
       { "<leader>w", group = "Windows" },

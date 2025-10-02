@@ -6,6 +6,10 @@ return {
     -- LSP Progress Handler
     local lsp_messages = {}
 
+    local function escape_status(text)
+      return text and text:gsub("%%", "%%%%") or nil
+    end
+
     vim.lsp.handlers["$/progress"] = function(_, result, ctx)
       local token = result.token
       local value = result.value
@@ -35,9 +39,9 @@ return {
 
       for _, msg in pairs(lsp_messages) do
         if msg.percentage then
-          table.insert(active, string.format("%s: %s (%d%%)", msg.client, msg.title, msg.percentage))
+          table.insert(active, escape_status(string.format("%s: %s (%d%%%%)", msg.client, msg.title, msg.percentage)))
         else
-          table.insert(active, string.format("%s: %s", msg.client, msg.title))
+          table.insert(active, escape_status(string.format("%s: %s", msg.client, msg.title)))
         end
       end
 
@@ -54,7 +58,11 @@ return {
         end
       end
 
-      return #attached > 0 and ("LSP: " .. table.concat(attached, ", ")) or "LSP: Off"
+      if #attached > 0 then
+        return escape_status("LSP: " .. table.concat(attached, ", "))
+      end
+
+      return "LSP: Off"
     end
 
     require("lualine").setup({

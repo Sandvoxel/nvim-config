@@ -8,6 +8,5 @@ return {
         null_ls.builtins.formatting.stylua,
       },
     })
-
   end,
 }

@@ -14,4 +14,3 @@ return {
     vim.g.undotree_DiffAutoOpen = 1
   end,
 }
-
